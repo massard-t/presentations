@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-markdown>
+          ## Introduction a Docker
+
+          par
+
+          ###### Theo Massard
+        </section>
+				<section data-markdown>
+          *Mon experience sur Docker*
+          - Premiers pas il y a 1 an
+          - Conteneurisation de mon entreprise en stage
+          - Utilisation permanente depuis
+          - Usage du projet Moby pour mon projet Innovant
+        </section>
+        <section>
+          <section>
+            <h2>Sommaire</h2>
+            <h3>1. Presentation de Docker</h3>
+            <ol>
+              <li> Use cases </li>
+              <li> Exemple </li>
+            </ol>
+          </section>
+          <section>
+            <h3>2. Creation d'un container</h3>
+            <ol>
+              <li>Dockerfile - <i> Description et redaction </i></li>
+              <li>Premiere image - <i> Explication du systeme de layer </i></li>
+              <li>Lancement du container - <i> `docker run ` etc.</i></li>
+            </ol>
+          </section>
+          <section>
+            <h3>3. Utilisation de docker-compose</h3>
+            <ol>
+              <li>Simple - <i>Un seul container</i></li>
+              <li>Complexe - <i>Architecture web</i></li>
+              </ol>
+          </section>
+          <section>
+            <h3>4. Questions</h3:>
+          </section>
+        </section>
+        <section data-markdown>
+          <h3> 1. Presentation de Docker </h3>
+          <blockquote>
+            &ldquo;Our mission is to build tools of mass innovation.&rdquo;
+            <i>Solomon Hykes - Docker's Founder and CTO</i>
+          </blockquote>
+        </section>
+        <section>
+          <h3> Docker vs Vms </h3>
+          <img src="https://i.imgur.com/MJHfm1c.jpg"/>
+          <p> source: <a title="Stack Overflow" href="https://stackoverflow.com/questions/16047306/how-is-docker-different-from-a-normal-virtual-machine">Stack Overflow</a></p>
+        </section>
+        <section>
+          <h3> 1.1. Use cases </h3>
+          <ul>
+            <li> Avoir un environement constant et replicable </li>
+            <li> Faciliter la portabilite d'une application </li>
+            <li> Vitesse de deploiement </li>
+            <li> Environement de tests </li>
+          </ul>
+        </section>
+        <section>
+          <h3> 1.2. Exemple </h3>
+          <p> Demo time ! </p>
+        </section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+        controls: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
