@@ -46,6 +46,9 @@
               <li> Use cases </li>
               <li> Exemple </li>
             </ol>
+            <aside class="notes">
+              Description breve du sommaire, eviter de parler trop longtemps de ca
+            </aside>
           </section>
           <section>
             <h3>2. Creation d'un container</h3>
@@ -54,6 +57,9 @@
               <li>Premiere image - <i> Explication du systeme de layer </i></li>
               <li>Lancement du container - <i> `docker run ` etc.</i></li>
             </ol>
+            <aside class="notes">
+              Ce qu'on va faire ou non, description <i>tres breve</i> de la vie d'un container
+            </aside>
           </section>
           <section>
             <h3>3. Utilisation de docker-compose</h3>
@@ -61,6 +67,9 @@
               <li>Simple - <i>Un seul container</i></li>
               <li>Complexe - <i>Architecture web</i></li>
               </ol>
+              <aside class="notes">
+                Ne pas hesiter si besoin d'aller sur la doc ou chercher exemple en live.
+              </aside>
           </section>
           <section>
             <h3>4. Questions</h3:>
@@ -72,11 +81,17 @@
             &ldquo;Our mission is to build tools of mass innovation.&rdquo;
             <i>Solomon Hykes - Docker's Founder and CTO</i>
           </blockquote>
+          <aside class="notes">
+            Fait en Go, decrire le processus (LinuxKit, AuFS...) puis Moby project, (cf projet inno), into Docker CE puis Docker EE
+          </aside>
         </section>
         <section>
           <h3> Docker vs Vms </h3>
           <img src="https://i.imgur.com/MJHfm1c.jpg"/>
           <p> source: <a title="Stack Overflow" href="https://stackoverflow.com/questions/16047306/how-is-docker-different-from-a-normal-virtual-machine">Stack Overflow</a></p>
+          <aside class="notes">
+            Isolation, meilleure maitrise mais aussi abstraction (cf ram, cpu, swap...)
+          </aside>
         </section>
         <section>
           <h3> 1.1. Use cases </h3>
@@ -86,10 +101,94 @@
             <li> Vitesse de deploiement </li>
             <li> Environement de tests </li>
           </ul>
+          <aside class="notes">
+            Reference au stage
+          </aside>
         </section>
         <section>
           <h3> 1.2. Exemple </h3>
           <p> Demo time ! </p>
+          <aside class="notes">
+            <code>docker run hello-world, docker run debian</code>
+          </aside>
+        </section>
+        <section>
+          <h3> 2. Creation d'un container </h3>
+          <p>Presentation des differentes etapes qui composent la creation d'un container</p>
+          <aside class="notes">
+            Dockerfile, Image, container (mentionner Swarm, Compose, Kubernetes)
+          </aside>
+        </section>
+        <section>
+          <h3> 2.1. Dockerfile </h3>
+          La <i>Recette</i> d'un container.
+          <aside class="notes">
+            Expliquer la possibilite de complexifier, customiser....
+          </aside>
+        </section>
+        <section>
+          <h3> Structure d'un Dockerfile </h3>
+          <h4> Required Keywords </h4>
+          <code> FROM {{baseimage}}:{{version}} </code>
+          <br>
+          <code> CMD {{executable}} </code>
+          <aside class="notes">
+            Montrer exemple minimal (ubuntu + bash)
+          </aside>
+        </section>
+        <section>
+          <h3>Useful keywords</h3>
+          <code> ENV </code>
+          <br>
+          <code> RUN {{ command }} </code>
+          <br>
+          <code> WORKDIR {{ dir }}</code>
+          <br>
+          <code> ADD/COPY {{ src }} {{ dest }} </code>
+          <aside class="notes">
+            who gives a shit about this
+          </aside>
+        </section>
+        <section>
+          <h3> 2.2. Premiere image </h3>
+          <p> Demo time ! </p>
+          <aside class="notes">
+            Check terminal, ajouter packet ? curl etc. Live demo
+          </aside>
+        </section>
+        <section>
+          <h3> 2.3. Lancement du container </h3>
+          <p> Et encore demo time ! </p>
+          <aside class="notes">
+            Ouvrir ports, link, env
+          </aside>
+        </section>
+        <section>
+          <h3> 3. Le docker-compose </h3>
+          <p> Pourquoi ? </p>
+          <aside class="notes">
+            Architecture, lecture, eviter script bash, simplifier deploiement
+          </aside>
+        </section>
+        <section>
+          <h3> 3.1. Un DC simple </h3>
+          <p> Explication des differents flags </p>
+          <aside class="notes">
+            up, build, down
+          </aside>
+        </section>
+        <section>
+          <h3> 3.2. Complexe </h3>
+          <aside class="notes">
+            mysql + client mysql (recuperer scripts projet c++), link les deux, faire crari c'est bien
+          </aside>
+          <!-- <p> </p> -->
+        </section>
+        <section>
+          <h3> 4. Questions </h3>
+          <aside class="notes">
+            on espere avoir plein de questions a ce moment
+          </aside>
         </section>
 			</div>
 		</div>
